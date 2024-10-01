@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tiffin Service</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <h1>Tiffin Service</h1>
+            <nav>
+                <ul>
+                    <li><a href="#" id="home-btn" onclick="showHome()">Home</a></li>
+                    <li><a href="#" id="menu-btn" onclick="showMenu()">Menu</a></li>
+                    <li><a href="#" id="order-btn" onclick="showOrder()">Order</a></li>
+                    <li><a href="#" id="login-btn" onclick="showLoginForm()">Login</a></li>
+                    <li><a href="#" id="signup-btn" onclick="showSignUpForm()">Sign Up</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section (Home Page) -->
+    <section class="hero" id="home-page">
+        <div class="container">
+            <h2>Delicious Home-Cooked Meals, Delivered!</h2>
+            <p>Connect with local tiffin providers and enjoy freshly prepared meals every day.</p>
+            <a href="#menu" class="btn" onclick="showMenu()">Explore Menu</a>
+        </div>
+    </section>
+
+    <!-- Menu Section -->
+    <section class="menu" id="menu-page">
+        <div class="container">
+            <h2>Our Menu</h2>
+            <div class="menu-list">
+                <div class="menu-item">
+                    <img src="./idly.jpeg" alt="Idly">
+                    <h3>Idly</h3>
+                    <p>₹110</p>
+                    <button class="btn order-btn" onclick="addToCart('Idly', 110)">Order Now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="./dosa.jpeg" alt="Dosa">
+                    <h3>Dosa</h3>
+                    <p>₹160</p>
+                    <button class="btn order-btn" onclick="addToCart('Dosa', 160)">Order Now</button>
+                </div>
+                <div class="menu-item">
+                    <img src="./poori.jpeg" alt="Poori">
+                    <h3>Poori</h3>
+                    <p>₹140</p>
+                    <button class="btn order-btn" onclick="addToCart('Poori', 140)">Order Now</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Order Section -->
+    <section class="order" id="order-page">
+        <div class="container">
+            <h2>Your Orders</h2>
+            <ul id="order-list"></ul>
+            <p id="total-price"></p>
+        </div>
+    </section>
+
+    <!-- Login Form -->
+    <section class="form-section" id="login-form">
+        <div class="container">
+            <h2>Login</h2>
+            <form>
+                <input type="text" placeholder="Username" required>
+                <input type="password" placeholder="Password" required>
+                <button class="btn" type="submit">Login</button>
+                <p>Don't have an account? <a href="#" onclick="showSignUpForm()">Sign Up here</a></p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Sign Up Form -->
+    <section class="form-section" id="signup-form">
+        <div class="container">
+            <h2>Sign Up</h2>
+            <form>
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+                <button class="btn" type="submit">Sign Up</button>
+                <p>Already have an account? <a href="#" onclick="showLoginForm()">Login here</a></p>
+            </form>
+        </div>
+    </section>
+
+
+
+    <script src="app.js"></script>
+</body>
+</html>
